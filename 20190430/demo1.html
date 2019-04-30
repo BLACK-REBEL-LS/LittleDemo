@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo1</title>
+        <style type="text/css">
+            *{
+                margin: 0;padding: 0;
+            }
+            div{
+                overflow:hidden;/*防止溢出*/
+                width: 1160px;
+                height: 125px;
+                background-color:black;
+                margin:200px auto;/*外边距 盒子以外的距离 上下 左右（auto自动居中）*/
+                padding:20px;
+            }
+            div ul{
+                width:30000px;/*随便给一个很大数，防止li 溢出 只要保证最外面的div长度不变，ul没有关系*/
+                list-style: none;
+                /*display: flex;/*弹性盒模型，伸缩布局 兼容性不好*/
+            }
+            div ul li{
+                overflow: hidden;/*规定元素超出之后如何显示 hidden隐藏*/
+                /*display: inline-block; 默认解析出一个空格*/
+                float: left;/*左浮动，让元素横排显示*/
+                margin-right: 10px;
+                border-radius: 5px;/*圆角*/
+                width:184px;
+                height:125px;
+                transition: 0.5s cubic-bezier(.29,1.21,.52,1.47);
+                /*transition :过度 允许一个样式到另一个样式 有一个平滑的工程;
+                    cubic-bezier:贝塞尔曲线(运动轨迹) 规定运动方向
+                */
+            }
+            /*:hover 伪类选择器  当鼠标划过ul的时候，让li宽度改变*/
+            div ul:hover li{
+                width:106px;
+            }
+            /*sw=1160 106*5=530 + 575=1105*/
+            /*当鼠标划过改li的时候，这个li的宽度改变*/
+            div ul li:hover{
+                width:575px;/*575*125*/
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+           <ul>
+               <li><img src="image/1.jpg"> </li>
+               <li><img src="image/2.jpg"></li>
+               <li><img src="image/3.png"></li>
+               <li><img src="image/4.jpg"></li>
+               <li><img src="image/5.jpg"></li>
+               <li><img src="image/6.jpg"></li>
+           </ul>
+        </div>
+    </body>
+</html>

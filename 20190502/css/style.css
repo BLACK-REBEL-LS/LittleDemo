@@ -180,6 +180,7 @@ ul{
 
 .seckill{
     background-color: #f5f5f5;
+    height:20000px;
 }
 .seckill-head{
     height:170px;
@@ -189,7 +190,12 @@ ul{
 .seckill-nav{
     margin: -68px 0 22px;
 }
+.seckill-navfixed{
+    position: fixed;
+    top:60px;
+}
 .seckill-nav ul{
+    width:1226px;
     height:68px;
     background:#414141;
 
@@ -234,7 +240,11 @@ ul{
     text-align: left;
     line-height: 20px;
 }
+.seckill-goods .active{
+    display: block;
+}
 .seckill-goods ul{
+    display: none;/*隐藏*/
     margin-right:-13px;
 
 }

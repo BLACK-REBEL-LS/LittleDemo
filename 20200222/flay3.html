@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .layout{
+            margin-bottom: 100px;
+        }
+        .layout article div{/* 为每一个小div设置高*/
+            height:100px;
+        }
+        /*方式一：浮动，左右浮动，中间自适应*/
+        .layout.float .left{
+            float: left;
+            width:300px;
+            background-color: red;
+        }
+        .layout.float .right{
+            float: right;
+            width: 300px;
+            background-color: seagreen;
+        }
+        .layout.float .center{
+            background-color: skyblue;
+        }
+        /*方式二：绝对定位，大容器相对定位，小div绝对*/
+        .layout.absolute .left-center-right{
+            position: relative;
+        }
+        .layout.absolute .left{
+            position: absolute;
+            left: 0;
+            width:300px;
+            background-color: red;
+        }
+        .layout.absolute .right{
+            position: absolute;
+            right: 0;
+            width:300px;
+            background-color: seagreen;
+        }
+        .layout.absolute .center{/*中间区域，左边定位300，右边定位300，宽度自适应*/
+            position: absolute;
+            right: 300px;
+            left:300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!--1.浮动-->
+    <section class="layout float">
+        <article class="left-center-right">
+            <div class="left">left</div>
+            <div class="right">right</div>
+            <div class="center">center</div>
+            
+        </article>
+    </section>
+
+    <!--2.绝对定位-->
+    <section class="layout absolute">
+        <article class="left-center-right">
+            <div class="left">left</div>
+            <div class="center">center</div>
+            <div class="right">right</div>
+        </article>
+    </section>
+
+    <!--3.flex布局-->
+    
+
+    <!--4.表格布局table-->
+    
+
+    <!--5.网格布局grid-->
+</body>
+</html>

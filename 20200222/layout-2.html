@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>三栏布局02</title>
+        <style>
+              *{
+            padding: 0;
+            margin: 0;
+        }
+        .layout{
+            margin-bottom: 100px;
+        }
+        .layout article div{/* 为每一个小div设置高*/
+            height:100px;
+        }
+            /*方式三：flex*/
+        .layout.flex article{
+            display: flex;
+        }
+        
+        .layout.flex .left{
+            width:300px;
+            background-color: red;
+        }
+        .layout.flex .right{
+            width:300px;
+            background-color: seagreen;
+        }
+        .layout.flex .center{
+            flex: 1;
+            background-color: skyblue;
+        }
+        </style>
+    </head>
+    <body>
+        <!--3.flex布局-->
+        <section class="layout flex">
+            <article class="left-center-right">
+                <div class="left">left</div>
+                <div class="center">center</div>
+                <div class="right">right</div>
+            </article>
+        </section>
+    </body>
+</html>

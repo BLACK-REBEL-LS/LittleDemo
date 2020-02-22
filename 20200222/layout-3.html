@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>三栏布局02</title>
+        <style>
+              *{
+            padding: 0;
+            margin: 0;
+        }
+        .layout{
+            margin-bottom: 100px;
+        }
+        .layout article div{/* 为每一个小div设置高*/
+            height:100px;
+        }
+            /*方式四：table*/
+        .layout.table article{/*设置容器布局为table，宽度为100%*/
+            display: table;
+            width:100%;
+            height:100px;
+        }
+        .layout.table div{/*设置三个div为单元格*/
+            display: table-cell;
+        }
+        .layout.table .left{
+            width: 300px;
+            background-color: red;
+        }
+        .layout.table .right{
+            width:300px;
+            background-color: seagreen;
+        }
+        .layout.table .center{/*中间自适应*/
+            background-color: skyblue;
+        }
+        /*方式五：网格*/
+        .layout.grid article{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+        .layout.grid .left{
+            background-color: red;
+        }
+        .layout.grid .right{
+            background-color: seagreen;
+        }
+        .layout.grid .center{
+            background-color: skyblue;
+        }
+        </style>
+    </head>
+    <body>
+        <!--4.表格布局table-->
+        <section class="layout table">
+            <article class="left-center-right">
+                <div class="left">left</div>
+                <div class="center">center</div>
+                <div class="right">right</div>
+            </article>
+        </section>
+
+        <!--5.网格布局grid-->
+        <section class="layout grid">
+            <article class="left-center-right">
+                <div class="left">left</div>
+                <div class="center">center</div>
+                <div class="right">right</div>
+            </article>
+        </section>
+    </body>
+</html>
